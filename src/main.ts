@@ -2,11 +2,12 @@ import express from 'express'
 import router from './routes/v1'
 
 const app = express()
+const port = Number(process.env.PORT) || 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(port, '0,0,0,0', () => {
   console.log('Start on port 3000.')
 })
 
