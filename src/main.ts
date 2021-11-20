@@ -7,7 +7,7 @@ const port = Number(process.env.PORT) || 3000
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.listen(port, '0,0,0,0', () => {
+app.listen(port, '0.0.0.0', () => {
   console.log('Start on port 3000.')
 })
 
